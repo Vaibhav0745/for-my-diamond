@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heart Belongs to You 💖</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="My Heart Belongs to You 💖">
+    <meta property="og:description" content="A special message for someone special">
+    <meta property="og:image" content="images/thumbnail.jpg">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            animation: fall 5s linear forwards;
+            z-index: 1000;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-heart">💖</div>
+    </div>
+
+    <!-- Floating Hearts Background (Minimal) -->
+    <div class="floating-hearts"></div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <i class="fas fa-music"></i>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-button">
+        <i class="fas fa-heart"></i>
+    </div>
+    <div class="nav-menu">
+        <a href="#songs" class="nav-item">
+            <i class="fas fa-music"></i>
+            <span class="nav-tooltip">Songs</span>
+        </a>
+        <a href="#quotes" class="nav-item">
+            <i class="fas fa-quote-right"></i>
+            <span class="nav-tooltip">Quotes</span>
+        </a>
+        <a href="#poem" class="nav-item">
+            <i class="fas fa-feather-alt"></i>
+            <span class="nav-tooltip">Poem</span>
+        </a>
+        <a href="#timeline" class="nav-item">
+            <i class="fas fa-history"></i>
+            <span class="nav-tooltip">Our Journey</span>
+        </a>
+        <a href="#letter" class="nav-item">
+            <i class="fas fa-envelope"></i>
+            <span class="nav-tooltip">Letter</span>
+        </a>
+        <a href="#gallery" class="nav-item">
+            <i class="fas fa-images"></i>
+            <span class="nav-tooltip">Gallery</span>
+        </a>
+        <a href="#proposal" class="nav-item">
+            <i class="fas fa-ring"></i>
+            <span class="nav-tooltip">Proposal</span>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hey <span id="crushName">Piyusha</span> 💖</h1>
+            <p>I've created this just for you, to show you how special you are to me.</p>
+            <a href="#songs" class="cta-button">Explore My Heart</a>
+        </div>
+    </section>
+
+    <!-- Songs Section -->
+    <section id="songs" class="songs-section">
+        <h2 class="section-title">Songs That Remind Me of You 🎶</h2>
+        <div class="song-list">
+            <!-- Video Card 1 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <video poster="thumbnails/thumbnail1.jpg">
+                        <source src="videos/song1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-controls">
+                        <button class="video-control-btn play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="video-control-btn mute-btn">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-content">
+                    <div class="video-title">All I Dream of Is Your Eyes</div>
+                    <div class="video-description">
+                        <p>
+                            "Piyusha, every night when I close my eyes, it’s you I dream of. Your smile is the light that guides me through the darkest nights, and your presence is the warmth that fills my heart. In my dreams, we walk together under the stars, and every moment feels like a beautiful eternity. You are the melody in my thoughts, the muse behind my dreams, and the reason my heart beats with hope. No matter where life takes us, you will always be the one I dream of. 💖"
+        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Card 2 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <video poster="thumbnails/thumbnail1.jpg">
+                        <source src="videos/song2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-controls">
+                        <button class="video-control-btn play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="video-control-btn mute-btn">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-content">
+                    <div class="video-title">I Wanna Be Next to You</div>
+                    <div class="video-description">
+                        <p>
+                            "Piyusha, this song is my heart’s way of saying how much I want to be by your side. Every beat of this melody echoes my desire to stand next to you, to share every moment, and to be the one who makes you smile. Being close to you feels like home, and I want to be the person who holds your hand through every high and low. No matter where life takes us, all I want is to be next to you, always. 💖"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Card 3 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <div class="video-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <video poster="thumbnails/thumbnail1.jpg">
+                        <source src="videos/song3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-controls">
+                        <button class="video-control-btn play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="video-control-btn mute-btn">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-content">
+                    <div class="video-title">My Love Will Always Stay By You</div>
+                    <div class="video-description">
+                        <p>
+                            "Piyusha, this song is a promise from my heart to yours. No matter where life takes us, my love for you will always remain constant and true. Like the stars that shine every night, my feelings for you will never fade. You are my forever, and this song is my way of telling you that my love will always stay for you, unwavering and eternal. 💖"
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#proposal" class="proposal-link">Will you be mine? 💍</a>
+    </section>
+
+    <!-- Special Video Section -->
+    <section id="my-song" class="my-song-section">
+        <h2 class="section-title">A Song I Sang Just for You 🎤💖</h2>
+        <div class="romantic-video-container">
+            <div class="romantic-video-wrapper">
+                <div class="video-overlay large">
+                    <i class="fas fa-play"></i>
+                </div>
+                <video poster="thumbnail.jpg">
+                    <source src="VID_20250306_215700.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <button class="video-control-btn play-pause-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="video-control-btn mute-btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="romantic-message">
+                <div class="romantic-title">From My Heart to Your Ears</div>
+                <div class="romantic-description">
+                    <p>
+                        Piyusha, I gathered all my courage to sing this song for you. Every note carries my feelings, every word whispers my love. I may not be the best singer, but this melody comes straight from my heart to yours. I hope it makes you smile and shows you just how special you are to me. 💖
+                    </p>
+                </div>
+                <div class="romantic-note">
+                    <i class="fas fa-heart"></i> Recorded with love, just for you <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes" class="quotes-section">
+        <h2 class="section-title">Quotes That Speak My Heart 💬</h2>
+        <div class="quote-container">
+            <div class="quote">
+                "You are the sunshine that brightens my darkest days."
+                <div class="quote-author">- My Heart to Yours</div>
+            </div>
+            <div class="quote">
+                "Every moment with you feels like a beautiful dream."
+                <div class="quote-author">- My Soul to Yours</div>
+            </div>
+            <div class="quote">
+                "You are the missing piece I never knew I needed."
+                <div class="quote-author">- My Life to Yours</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poem Section -->
+    <section id="poem" class="poem-section">
+        <h2 class="section-title">A Poem Just for You 📜</h2>
+        <div class="poem-content">
+            <p>
+                From the moment I saw you, my heart knew,<br>
+                A spark was lit, deep and true.<br>
+                Not just beauty, but a soul so bright,<br>
+                Like the moon that softens the darkest night.<br><br>
+
+                You were my idol, my guiding star,<br>
+                The reason I've come this far.<br>
+                I stepped forward, I found my way,<br>
+                All because you inspired me each day.<br><br>
+
+                Your presence turns moments to gold,<br>
+                A warmth that never fades or grows cold.<br>
+                With every glance, my world stands still,<br>
+                A silent whisper, a wish, a thrill.<br><br>
+
+                I worked each day to reach your sight,<br>
+                Hoping someday, I'd shine as bright.<br>
+                And when I stood, with victory in hand,<br>
+                It was your strength that helped me stand.<br><br>
+
+                But love is not a chain, nor a plea,<br>
+                It's the purest form of being free.<br>
+                So no matter where life takes you to,<br>
+                I will always cherish and wait for you. 💖<br><br>
+            </p>
+            <div class="poem-signature">- Vaibhav</div>
+        </div>
+        <a href="#proposal" class="proposal-link">Will you be mine? 💍</a>
+    </section>
+
+    <!-- Timeline Section (Replacing Countdown) -->
+    <section id="timeline" class="timeline-section">
+        <h2 class="section-title">Our Journey Together 💫</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">First Day</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">"August 17/2023 – The Day My Heart Chose You 💖"</h3>
+                    <p class="timeline-text">
+
+                        It was the first day of my first year, a day like any other—until I saw you. In that single moment, everything changed. I didn’t just see you; I felt something I had never felt before. My heart whispered your name before I even knew it. That day, without you even realizing it, you became the most beautiful part of my story. From that moment on, every glance, every smile, and every silent moment felt like a chapter waiting to be written… with you.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">First Talk</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">"Our First Words – When Fate Brought Us Closer 💖"</h3>
+                    <p class="timeline-text">From the very first day, I tried my best—pushing myself to score good marks, to improve, hoping that one day, you’d notice me. But no matter how hard I tried, fate kept me waiting through the first year.
+
+                        Then, as if the universe had finally heard my silent wishes, the second year brought unexpected chances—traveling together to Karad, working side by side for Technova. It wasn’t just coincidence; it felt like destiny, like God Himself was creating moments to bring us closer. And in those moments, I finally found the chance I had been waiting for… to be a part of your world. ❤️
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        .</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Special Moment</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">"The Moments That Made Us 💖"
+
+</h3>
+                    <p class="timeline-text">Some moments in life feel like fate’s gentle whispers, guiding us toward something special.
+
+                        When we traveled to Karad, my only wish was to win the Paper Presentation Competition—not for myself, but to impress you. And we did it. That victory wasn’t just a trophy; it was a silent hope that maybe, just maybe, you’d see me the way I saw you.
+                        
+                        Then came another beautiful moment—when you won first prize in my event, Bollywood Day. Seeing you shine, celebrating your win, felt more special than any achievement of my own.
+                        
+                        And then, there was Poly Prince… I was going to sing, but not for the crowd—for you. But you weren’t there. My heart sank, but just as I was about to start, you arrived. It wasn’t planned, but it felt like destiny, like the universe aligning just to make that moment perfect.
+                        
+                        But the most emotional moment was when you were nominated for Best Outgoing Student. As you stood there, waiting for the result, I prayed with all my heart—not for my own future wins, but for you. I wanted nothing more than to see you hold that trophy, to see the happiness in your eyes. Because in that moment, your victory felt like my own, and your happiness meant everything to me. ❤️.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Today</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">"Today – The Moment My Heart Speaks 💖"
+
+                    </h3>
+                    <p class="timeline-text">After all these moments, all these silent wishes, today is the day I finally gather the courage to tell you what my heart has been holding onto for so long.
+
+                        I know this is your final year, the most important one, and I don’t want to distract you from your dreams, your goals—because they matter. Your success, your future, they mean everything, and I will always stand by you, cheering for you in every step you take.
+                        
+                        But if I don’t say this now, I know I’ll regret it forever. Keeping it inside, hoping for the perfect moment, waiting for destiny to align again—I can’t do that anymore. Because the truth is, every moment with you has already been perfect in its own way.
+                        
+                        So here I am, not with expectations, not with demands, but with nothing but love in my heart. Love that has grown from a silent wish into something undeniable. No matter what your answer is, no matter what the future holds, I just want you to know—you have been, and always will be, the most beautiful part of my story. ❤️</p>
+                </div>
+            </div>
+        </div>
+        <a href="#proposal" class="proposal-link">Will you be mine? 💍</a>
+    </section>
+
+    <!-- Letter Section -->
+    <section id="letter" class="feelings-section">
+        <h2 class="section-title">My Feelings for You 💌</h2>
+        <div class="letter-container">
+            <div class="letter-envelope">
+                <div class="envelope"></div>
+                <div class="envelope-flap"></div>
+                <div class="letter">
+                    <div class="letter-content">
+                        <h2>To My Dearest Piyusha 💖</h2>
+                        <p>
+                            Dear Piyusha,<br><br>
+                            I don’t know how to put this into words, but I can’t keep this inside any longer. From the very first time I saw you, something about you stood out—something I couldn’t ignore, no matter how much I tried. It wasn’t just your smile, your kindness, or the way you carry yourself with such quiet confidence. It was the way you made the world around you seem a little more beautiful, a little more alive.<br><br>
+                            For a longest time,I kept my feelings hidden watching you from afar , admiring everything that makes you so special. But then, life gave me a moment with you—the day we traveled together to Karad for the competition and also returned back to Kolhapur together. That day was special in ways I can’t explain. Sitting beside you, talking to you, simply existing in the same space as you—it felt like the universe had given me a glimpse of something wonderful. A memory I’ll hold onto forever.<br><br>
+                            
+                            And now, as your last semester unfolds, I find myself caught between the joy of having known you and the sadness of knowing that soon, you’ll be walking a path where I might not get to see you as often—or maybe, not at all. The thought of not being able to see you, to hear your voice, or to feel your presence around me, disturbs me every day. I don’t know what the future holds, but I do know this: I couldn’t let you go without telling you how much you mean to me.<br><br>
+                            
+                            I don’t expect anything, nor do I wish to burden you with these feelings. Your dreams, your goals—those come first, and I would never want to be a distraction from the incredible things you’re meant to achieve. I just wanted you to know that, in this world full of fleeting moments and passing faces, you were someone who truly left a mark on my heart.<br><br>
+                            
+                            But more than that, I want you to know this—I will always care for you. No matter where life takes us, no matter how far apart we may be, a part of me will always belong to you. And if life ever gives me even the smallest chance to be by your side, I’ll be there. I will wait for you, for as long as it takes. Until my last breath, I will hold you in my heart.<br> <br> 
+                            
+                            And there’s something else I’ve never told you – you are the reason I started participating in paper presentation comptitions. Seeing your confidence ,your dedication , and the way you strive for excellence inspired me to step out of my comfort zone. If I have grown, if I have achieved anything a part of it is because of you. You unknowingly gave me the courage to push myself , and for that ,I will always be grateful.<br><br>
+                            
+                            I also want to say this, I am not like other boys who play with the emotions of girls. I respect girls and their feelings, and I could never think of hurting you in any way. If I just wanted to propose to you , I could have done it at last years or these years Spandan , but I don’t believe in that , I don’t believe I grand gestures just for the sake of it . I believe in true emotions, in honesty, in letting my heart speak in the most genuine way possible. That’s why I chose this letter – because this is the only way I could truly express what I feel.<br><br>
+                            
+                            If this letter hurts you in any way , I am truly sorry !!. That was never my intention. But if I had kept these feelings buried inside , I knew I would regret it for the rest of my life. I would rather be honest about my heart than live with the weight of unspoken words.<br><br>
+                            
+                            I don’t expect an answer right away. You can take your time to know me better, to understand what I truly feel. I’ve been admiring you since my first year, but I want you to see me for who I am, beyond just these words. And if someday you feel like replying , I’ll be right here, waiting not with expectations, but with hope.<br><br>
+                            
+                            No matter where life takes you, I hope you find happiness, love, and all the success you deserve. And if ever you look back and remember me, I hope it’s with the warmth of knowing that someone, somewhere, will always be wishing the best for you.<br><br>
+                            
+                            With all my heart,  
+                            <br>
+                            -Vaibhav
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="letter-instruction">Tap the envelope to open my heart 💌</p>
+        </div>
+        <a href="#proposal" class="proposal-link">Will you be mine? 💍</a>
+    </section>
+
+    <!-- Special Video Before Gallery -->
+    <section id="special-video" class="special-video-section">
+        <h2 class="section-title" style="color: white;">I'm Not Perfect, But For You... 💖</h2>
+        <div class="special-video-container">
+            <div class="video-overlay large">
+                <i class="fas fa-play"></i>
+            </div>
+            <video poster="thumbnails/special-thumbnail.jpg">
+                <source src="videos/song.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls">
+                <button class="video-control-btn play-pause-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="video-control-btn mute-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </div>
+        <div class="special-message">
+            I know I’m not perfect, but I swear I’ll become better—for you, for us. Maybe I only stand out in looks, but deep down, I’m just like you—a topper, an all-rounder in academics, sports, and extracurriculars. And just like I give my best in everything, I promise to give my best to you, every single day.I will always love you, with all my heart. I will always stay loyal to you, no matter what.I don’t just want to be a part of your happiest moments; I want to stand beside you in your saddest ones too. When you laugh, I want to be the reason. When you cry, I want to be the shoulder you lean on. Through every high and every low, I want to be there—loving you, standing by you, and proving to you every day just how much you mean to me.
+
+<br>
+        </div>
+        <a href="#proposal" class="proposal-link">Will you be mine? 💍</a>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">The Reason I Smile 📸</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/img1.jpeg" alt="Memory 1">
+                <div class="gallery-caption">Your victory felt like my own because your happiness means everything to me.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img2.jpeg" alt="Memory 2">
+                <div class="gallery-caption">This is something i found😊</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img3.jpeg" alt="Memory 3">
+                <div class="gallery-caption">A legacy of bravery, reflected in your radiant presence!</div>
+            </div>
+        <a href="#proposal" class="proposal-link">Will you be mine? 💍</a>
+    </section>
+
+    <!-- Proposal Section -->
+    <section id="proposal" class="proposal-section">
+        <div class="proposal-content">
+            <h2 class="section-title" style="color: white;">Will You Be Mine? 💍</h2>
+            <p class="proposal-text">
+                From the very first day I saw you, my heart chose you. Every moment, every silent wish, and every little effort was for you. I don’t know if destiny truly exists, but if it does, it has been bringing me closer to you in the most beautiful ways—through shared moments, victories, and the little coincidences that never felt like accidents.
+
+I’ve admired you not just for your beauty, but for your kindness, your strength, and the way you light up every place you walk into. And then… there’s your voice. The voice that feels like a melody, the one that brings me peace, that I could listen to forever.
+
+Today, I stand here, not with promises of a perfect love story, but with the promise of always being there—through your happiest moments and your hardest days, as your biggest supporter, your best friend, and someone who will always choose you.
+
+So, with all my heart, I ask you—Will you be mine? Will you let me be a part of your story, just like you’ve been the most beautiful part of mine? ❤️
+            </p>
+            <div class="proposal-buttons">
+                <button class="proposal-btn yes-btn" data-phone="+919699504875" data-message="SHE SAID YES! 💖">Yes, I Will! 💖</button>
+                <button class="proposal-btn no-btn" data-phone="+919699504875" data-message="She said no... 💔">No, Sorry</button>
+            </div>
+            <p class="notification-status" style="margin-top: 20px; font-size: 1.4rem; opacity: 0;"></p>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="final-cta-section">
+        <a href="#proposal" class="final-proposal-link">Piyusha, Will You Be Mine Forever? 💍</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with <i class="fas fa-heart"></i> by Vaibhav</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("74UeROod2qjnwSL8l"); // We'll replace this with the actual public key
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
