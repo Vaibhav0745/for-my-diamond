@@ -400,6 +400,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         notificationStatus.style.color = '#4CAF50';
     }
     
+    // Function to send WhatsApp message
+    function sendWhatsAppMessage(phoneNumber, message) {
+        // Remove any non-numeric characters from phone number
+        const cleanPhone = phoneNumber.replace(/\D/g, '');
+        // Create WhatsApp URL with message
+        const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
+        // Open WhatsApp in a new tab
+        window.open(whatsappUrl, '_blank');
+    }
+
     // Proposal Buttons
     const yesBtn = document.querySelector('.yes-btn');
     const noBtn = document.querySelector('.no-btn');
@@ -431,12 +441,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 }());
             }
             
-            // Send notification
+            // Send WhatsApp message
             const phoneNumber = this.getAttribute('data-phone');
             const message = this.getAttribute('data-message');
             
             if (phoneNumber && message) {
-                sendSMSNotification(phoneNumber, message);
+                sendWhatsAppMessage(phoneNumber, message);
             }
             
             // Update UI
